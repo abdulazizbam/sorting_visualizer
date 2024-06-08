@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: black;
+        color: white;
+    }
+
+    .algos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .algos button{
+        padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .algos button:hover{
+        background-color: rgb(85, 85, 85);
+        color: white;
+    }
+
+    .algos .active {
+        background-color: red;
+        color: white;
+    }
+
+    .btnCon{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .btnCon button{
+        padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .inactive{
+        opacity: 0.5;
+        cursor:not-allowed;
+    }
+
+</style>
+<body>
+    <main>  
+        <h1>List sorting Algorithms Visualizer</h1>
+        <div class="algos">
+            <button class="active" id="selectionSort">Selection Sort</button>
+            <button  id="mergeSort">Merge Sort</button>
+            <button id="quickSort">Quick Sort</button>
+            <button id="bubbleSort">Bubble Sort</button>
+            
+        </div>
+        <div class="btnCon">
+            <button id="start">Start</button>
+            <button class="inactive" id="stop">stop</button>
+        </div>
+        
+    </main>
+    <script src="classes.js"></script>
+    <script src="sorter.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
